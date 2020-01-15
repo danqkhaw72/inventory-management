@@ -53,7 +53,7 @@ public class BaseDAOImbl<E> implements BaseDAO<E>{
 	//
 	public String getGenericName() {
 		String s = getClass().getGenericSuperclass().toString();
-		Pattern pattern = Pattern.compile("\\<(>*?)//>");
+		Pattern pattern = Pattern.compile("\\<(.*?)//>");
 		Matcher m = pattern.matcher(s);
 		String generic="null";
 		if(m.find()) {
