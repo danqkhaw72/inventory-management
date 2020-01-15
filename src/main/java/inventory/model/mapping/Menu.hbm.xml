@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 14, 2020 3:54:48 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="inventory.model.Menu" table="menu" catalog="inventoryF_management">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="parentId" type="int">
+            <column name="PARENT_ID" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="URL" length="100" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="100" not-null="true" />
+        </property>
+        <property name="orderIndex" type="int">
+            <column name="ORDER_INDEX" not-null="true" />
+        </property>
+        <property name="activeFlag" type="int">
+            <column name="ACTIVE_FLAG" not-null="true" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="CREATE_DATE" length="19" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="UPDATE_DATE" length="19" not-null="true" />
+        </property>
+        <set name="auths" table="auth" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="MENU_ID" not-null="true" />
+            </key>
+            <one-to-many class="inventory.model.Auth" />
+        </set>
+    </class>
+</hibernate-mapping>

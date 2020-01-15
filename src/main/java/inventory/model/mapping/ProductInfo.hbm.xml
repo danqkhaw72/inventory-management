@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 14, 2020 3:54:48 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="inventory.model.ProductInfo" table="product_info" catalog="inventoryF_management">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="category" class="inventory.model.Category" fetch="select">
+            <column name="CATE_ID" not-null="true" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="CODE" length="50" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="100" not-null="true" />
+        </property>
+        <property name="decription" type="string">
+            <column name="DECRIPTION" length="65535" />
+        </property>
+        <property name="imgUrl" type="string">
+            <column name="IMG_URL" length="200" not-null="true" />
+        </property>
+        <property name="activeFlag" type="int">
+            <column name="ACTIVE_FLAG" not-null="true" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="CREATE_DATE" length="19" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="UPDATE_DATE" length="19" not-null="true" />
+        </property>
+        <set name="productInStocks" table="product_in_stock" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PRODUCT_ID" not-null="true" />
+            </key>
+            <one-to-many class="inventory.model.ProductInStock" />
+        </set>
+        <set name="histories" table="history" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PRODUCT_ID" />
+            </key>
+            <one-to-many class="inventory.model.History" />
+        </set>
+        <set name="invoices" table="invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PRODUCT_ID" not-null="true" />
+            </key>
+            <one-to-many class="inventory.model.Invoice" />
+        </set>
+    </class>
+</hibernate-mapping>
