@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="top_nav">
 	<div class="nav_menu">
 		<div class="nav toggle">
@@ -18,8 +19,7 @@
 							class="dropdown-item" href="javascript:;"> <span
 							class="badge bg-red pull-right">50%</span> <span>Settings</span>
 						</a> <a class="dropdown-item" href="javascript:;">Help</a> <a
-							class="dropdown-item" href="login.html"><i
-							class="fa fa-sign-out pull-right"></i> Log Out</a>
+							class="dropdown-item" href="<c:url value="/logout"/>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
 					</div>
 				</li>
 
