@@ -1,30 +1,28 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Jan 14, 2020 3:54:48 PM by Hibernate Tools 3.5.0.Final -->
-<hibernate-mapping>
-    <class name="inventory.model.Auth" table="auth" catalog="inventoryF_management">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jan 15, 2020 3:54:22 PM by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="inventoryF_management" dynamic-insert="false" dynamic-update="false" mutable="true" name="inventory.model.Auth" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="auth">
         <id name="id" type="java.lang.Integer">
-            <column name="ID" />
-            <generator class="identity" />
+            <column name="ID"/>
+            <generator class="identity"/>
         </id>
-        <many-to-one name="menu" class="inventory.model.Menu" fetch="select">
-            <column name="MENU_ID" not-null="true" />
+        <many-to-one class="inventory.model.Menu" embed-xml="true" fetch="select" insert="true" name="menu" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="MENU_ID" not-null="true"/>
         </many-to-one>
-        <many-to-one name="role" class="inventory.model.Role" fetch="select">
-            <column name="ROLE_ID" not-null="true" />
+        <many-to-one class="inventory.model.Role" embed-xml="true" fetch="select" insert="true" name="role" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="ROLE_ID" not-null="true"/>
         </many-to-one>
-        <property name="permission" type="int">
-            <column name="PERMISSION" not-null="true" />
+        <property generated="never" lazy="false" name="permission" optimistic-lock="true" type="int" unique="false">
+            <column name="PERMISSION" not-null="true"/>
         </property>
-        <property name="activeFlag" type="int">
-            <column name="ACTIVE_FLAG" not-null="true" />
+        <property generated="never" lazy="false" name="activeFlag" optimistic-lock="true" type="int" unique="false">
+            <column name="ACTIVE_FLAG" not-null="true"/>
         </property>
-        <property name="createDate" type="timestamp">
-            <column name="CREATE_DATE" length="19" not-null="true" />
+        <property generated="never" lazy="false" name="createDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="CREATE_DATE" not-null="true"/>
         </property>
-        <property name="updateDate" type="timestamp">
-            <column name="UPDATE_DATE" length="19" not-null="true" />
+        <property generated="never" lazy="false" name="updateDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="UPDATE_DATE" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

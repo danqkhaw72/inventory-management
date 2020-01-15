@@ -1,5 +1,5 @@
 package inventory.model;
-// Generated Jan 14, 2020 3:54:48 PM by Hibernate Tools 3.5.0.Final
+// Generated Jan 15, 2020 3:54:22 PM by Hibernate Tools 5.4.7.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -14,6 +14,7 @@ public class Users implements java.io.Serializable {
 	private String userName;
 	private String password;
 	private String email;
+	private String name;
 	private int activeFlag;
 	private Date createDate;
 	private Date updateDate;
@@ -22,20 +23,23 @@ public class Users implements java.io.Serializable {
 	public Users() {
 	}
 
-	public Users(String userName, String password, String email, int activeFlag, Date createDate, Date updateDate) {
+	public Users(String userName, String password, String email, String name, int activeFlag, Date createDate,
+			Date updateDate) {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
+		this.name = name;
 		this.activeFlag = activeFlag;
 		this.createDate = createDate;
 		this.updateDate = updateDate;
 	}
 
-	public Users(String userName, String password, String email, int activeFlag, Date createDate, Date updateDate,
-			Set userRoles) {
+	public Users(String userName, String password, String email, String name, int activeFlag, Date createDate,
+			Date updateDate, Set userRoles) {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
+		this.name = name;
 		this.activeFlag = activeFlag;
 		this.createDate = createDate;
 		this.updateDate = updateDate;
@@ -72,6 +76,14 @@ public class Users implements java.io.Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getActiveFlag() {

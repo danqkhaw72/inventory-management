@@ -1,5 +1,5 @@
 package inventory.model;
-// Generated Jan 14, 2020 3:54:48 PM by Hibernate Tools 3.5.0.Final
+// Generated Jan 15, 2020 3:54:22 PM by Hibernate Tools 5.4.7.Final
 
 import java.math.BigDecimal;
 import java.util.Date;
