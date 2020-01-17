@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!DOCTYPE html>
 <html>
@@ -24,6 +24,12 @@
 
     <!-- Custom Theme Style -->
     <link href="<c:url value="/resources/build/css/custom.min.css"/>" rel="stylesheet">
+    <!-- PNotify -->
+    <link href="<c:url value="/resources/vendors/pnotify/dist/pnotify.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/vendors/pnotify/dist/pnotify.buttons.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/vendors/pnotify/dist/pnotify.nonblock.css"/>" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="<c:url value="/resources/vendors/jquery/dist/jquery.min.js"/>"></script>
   </head>
 
   <body class="nav-md footer_fixed">
@@ -32,7 +38,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>KInventory Management!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Inventory Management!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -88,8 +94,7 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="<c:url value="/resources/vendors/jquery/dist/jquery.min.js"/>"></script>
+    
     <!-- Bootstrap -->
    <script src="<c:url value="/resources/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"/>"></script>
     <!-- FastClick -->
@@ -98,8 +103,12 @@
     <script src="<c:url value="/resources/vendors/nprogress/nprogress.js"/>"></script>
     <!-- jQuery custom content scroller -->
     <script src="<c:url value="/resources/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"/>"></script>
+    <!-- PNotify -->
+    <script src="<c:url value="/resources/vendors/pnotify/dist/pnotify.js"/>"></script>
+    <script src="<c:url value="/resources/vendors/pnotify/dist/pnotify.buttons.js"/>"></script>
+    <script src="<c:url value="/resources/vendors/pnotify/dist/pnotify.nonblock.js"/>"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="<c:url value="/resources/build/js/custom.min.js"/>"></script>
+    <script src="<c:url value="/resources/build/js/custom.js"/>"></script>
   </body>
 </html>

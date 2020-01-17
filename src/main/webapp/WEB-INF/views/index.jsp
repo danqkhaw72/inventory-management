@@ -3,7 +3,7 @@
 	<div class="">
 		<div class="page-title">
 			<div class="title_left">
-				<p>Hello apche tiles</p>
+				<p>Hello Word!</p>
 			</div>
 		</div>
 	</div>

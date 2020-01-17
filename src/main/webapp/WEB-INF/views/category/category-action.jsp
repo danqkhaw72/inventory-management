@@ -19,29 +19,29 @@
 							<form:hidden path="id" />
 							<form:hidden path="createDate" />
 							<form:hidden path="activeFlag" />
-							<div class="form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="code">Code <span class="required">*</span>
+							<div class="item form-group">
+								<label class="col-form-label col-md-3 col-sm-3 label-align" for="code">Code <span class="required">*</span>
 								</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="col-md-6 col-sm-6">
 									<form:input path="code" cssClass="form-control col-md-7 col-xs-12" disabled="${viewOnly}" />
 									<div class="has-error">
 										<form:errors path="code" cssClass="help-block"></form:errors>
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
+							<div class="item form-group">
+								<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name <span class="required">*</span>
 								</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="col-md-6 col-sm-6">
 									<form:input path="name" cssClass="form-control col-md-7 col-xs-12" disabled="${viewOnly}" />
 									<div class="has-error">
 										<form:errors path="name" cssClass="help-block"></form:errors>
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="item form-group">
+								<label for="description" class="col-form-label col-md-3 col-sm-3 label-align">Description</label>
+								<div class="col-md-6 col-sm-6">
 									<form:input path="description" cssClass="form-control col-md-7 col-xs-12" disabled="${viewOnly}" />
 									<div class="has-error">
 										<form:errors path="description" cssClass="help-block"></form:errors>
@@ -49,8 +49,8 @@
 								</div>
 							</div>
 							<div class="ln_solid"></div>
-							<div class="form-group">
-								<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+							<div class="item form-group">
+								<div class="col-md-6 col-sm-6 offset-md-3">
 									<button class="btn btn-primary" type="button" onclick="cancel();">Cancel</button>
 									<c:if test="${!viewOnly }">
 										<button class="btn btn-primary" type="reset">Reset</button>
